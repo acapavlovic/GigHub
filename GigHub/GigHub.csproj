@@ -207,6 +207,10 @@
     <Compile Include="Migrations\201901090940511_UpdateConventions.Designer.cs">
       <DependentUpon>201901090940511_UpdateConventions.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901091014554_PopulateGenres.cs" />
+    <Compile Include="Migrations\201901091014554_PopulateGenres.Designer.cs">
+      <DependentUpon>201901091014554_PopulateGenres.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -300,6 +304,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201901090940511_UpdateConventions.resx">
       <DependentUpon>201901090940511_UpdateConventions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901091014554_PopulateGenres.resx">
+      <DependentUpon>201901091014554_PopulateGenres.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
