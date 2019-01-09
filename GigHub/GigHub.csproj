@@ -216,18 +216,30 @@
     <Compile Include="Migrations\201901091505418_AddForeignKeyPropertiesToGig.Designer.cs">
       <DependentUpon>201901091505418_AddForeignKeyPropertiesToGig.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901092321346_AddNamePropToApplicationUser.cs" />
+    <Compile Include="Migrations\201901092321346_AddNamePropToApplicationUser.Designer.cs">
+      <DependentUpon>201901092321346_AddNamePropToApplicationUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\Gig.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="ViewModel\ExternalLoginConfirmationViewModel.cs" />
+    <Compile Include="ViewModel\ExternalLoginListViewModel.cs" />
+    <Compile Include="ViewModel\ForgotPasswordViewModel.cs" />
+    <Compile Include="ViewModel\ForgotViewModel.cs" />
+    <Compile Include="ViewModel\LoginViewModel.cs" />
+    <Compile Include="ViewModel\RegisterViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModel\FutureDate.cs" />
     <Compile Include="ViewModel\GigFormViewModel.cs" />
+    <Compile Include="ViewModel\ResetPasswordViewModel.cs" />
+    <Compile Include="ViewModel\SendCodeViewModel.cs" />
     <Compile Include="ViewModel\ValidTime.cs" />
+    <Compile Include="ViewModel\VerifyCodeViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -319,6 +331,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201901091505418_AddForeignKeyPropertiesToGig.resx">
       <DependentUpon>201901091505418_AddForeignKeyPropertiesToGig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901092321346_AddNamePropToApplicationUser.resx">
+      <DependentUpon>201901092321346_AddNamePropToApplicationUser.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
