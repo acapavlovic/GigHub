@@ -81,7 +81,7 @@ h2 {
     box-shadow: none;
 }
 
-.btn {
+#btnSave {
     padding: 6px 25px;
     font-size: 17px;
 }
@@ -142,6 +142,7 @@ h2 {
     position: absolute;
     top: 0px;
     left: 75px;
+    min-width: 155px;
 }
 
 .gigs > li .details .artist{
