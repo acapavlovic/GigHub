@@ -17,8 +17,10 @@
             </div>
             <div class="details">
                 <span class="artist">
-                    @gig.Artist.Name
+                    @gig.Artist.Name                
+                    <button attr-artist-id="@gig.ArtistId" class="btn btn-link btn-sm js-toggle-following">Follow</button>
                 </span>
+
                 <span class="genre">
                     @gig.Genre.Name
                 </span>
@@ -32,23 +34,33 @@
 @section scripts
 {
     <script>
-        $(document.ready).ready(function () {
-            $(".js-toggle-attendance").click(function (e) {
+        $(document.ready).ready(function() {
+            $(".js-toggle-attendance").click(function(e) {
                 /**
                 * We can assign $(e.target) to some variable, for ex. var 'button'
                 */
-                $.post("/api/attendance", { gigId : $(e.target).attr("attr-gig-id")})
-                    .done(function () {
+                $.post("/api/attendance", { GigId: $(e.target).attr("attr-gig-id") })
+                    .done(function() {
                         $(e.target)
                             .removeClass("btn-default")
                             .addClass("btn-info")
                             .text("Going");
                     })
-                    .fail(function () {
+                    .fail(function() {
                         alert("Something failed!");
+                    });
+            });
+
+            $("js-toggle-following").click(function(e) {
+                $.post("/api/following", { FolloweeId: $(e.target).attr("attr-artist-id") })
+                    .done(function() {
+                        $(e.target).text("Following");
                     })
-            })
-        })
+                    .fail(function() {
+                        alert("Something failed!");
+                    });
+            });
+        });
 
     </script>
 }
